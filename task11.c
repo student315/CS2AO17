@@ -5,8 +5,7 @@
 int main(void) {
     int pfds1[2]; 
     int pfds2[2];
-    pipe(pfds1); 
-    pipe(pfds2);  
+    pipe(pfds1), pipe(pfds2);  
 
     if (!fork()) {
         close(1);  
